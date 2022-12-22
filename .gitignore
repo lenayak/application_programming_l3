@@ -1,0 +1,9 @@
+annotation.csv
+annotation1.csv
+annotation2.csv
+.idea/.gitignore
+.idea/vcs.xml
+/copy_dataset
+/new_dataset
+/__pycache__
+.idea/.gitignore

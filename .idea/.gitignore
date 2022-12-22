@@ -1,3 +1,11 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/__pycache__
+/copy_dataset
+/new_dataset
+/.idea
+annotation.csv
+annotation1.csv
+annotation2.csv
+
