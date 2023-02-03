@@ -19,8 +19,9 @@ class Window(QWidget):
         while self.path_to_folder == "":
             try:
                 self.path_to_folder = QFileDialog.getExistingDirectory(self, 'Select Folder')
-                paths_to_files = task1.get_paths_to_files(self.path_to_folder)
-                task1.write_as_csv(paths_to_files)
+                paths_to_files = task1.get_path_to_files(self.path_to_folder)
+                task1.write_as_csv(self.path_to_folder, paths_to_files)
+                break
             except:
                 print("Датасет не найден")
                 self.path_to_folder = ""
@@ -75,31 +76,31 @@ class Window(QWidget):
 
     def next_one(self) -> None:
         """Display next review"""
-        path = self.one.__next__()
+        path = self.star_one.__next__()
         file = open(path, 'r', encoding='utf-8')
         self.lineedit1.setText(file.read())
     
     def next_two(self) -> None:
         """Display next review"""
-        path = self.two.__next__()
+        path = self.star_two.__next__()
         file = open(path, 'r', encoding='utf-8')
         self.lineedit2.setText(file.read())
 
     def next_three(self) -> None:
         """Display next review"""
-        path = self.three.__next__()
+        path = self.star_three.__next__()
         file = open(path, 'r', encoding='utf-8')
         self.lineedit3.setText(file.read())    
 
     def next_four(self) -> None:
         """Display next review"""
-        path = self.four.__next__()
+        path = self.star_four.__next__()
         file = open(path, 'r', encoding='utf-8')
         self.lineedit4.setText(file.read())   
 
     def next_five(self) -> None:
         """Display next review"""
-        path = self.five.__next__()
+        path = self.star_five.__next__()
         file = open(path, 'r', encoding='utf-8')
         self.lineedit5.setText(file.read())     
 

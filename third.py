@@ -108,11 +108,11 @@ def write_as_csv(path: str, path_to_files: str) -> None:
         for i in range(0, len(path_to_files)):
             path_to_files[i] = str(path_to_files[i])
             writer.writerow([f'{path_to_files[i]}',
-                             os.path.relpath(path_to_files[i],start=os.path.join("Рабочий стол", "application_programming", "application_programming_l2")), os.path.basename(path_to_files[i])])
+                             os.path.relpath(path_to_files[i],start=os.path.join("Рабочий стол", "application_programming", "application_programming_l3")), os.path.basename(path_to_files[i])])
 
 
 def path_to_copy_dataset():
-    return os.path.abspath("../application_programming_l2/copy_dataset")
+    return os.path.abspath("../application_programming_l3/copy_dataset")
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@ def make_new_dataset() -> None:
 def copy_dataset(path: str) -> str:
     """Copies dataset into the new direct"""
     make_new_dataset()
-    new_dataset_path = os.path.abspath("../application_programming_l2/new_dataset")
+    new_dataset_path = os.path.abspath("../application_programming_l3/new_dataset")
     for num_of_folder in range(1,6):
         path_to_folder = os.path.join(path, str(num_of_folder))
         num_of_files = sum(os.path.isfile(os.path.join(path_to_folder, f))

@@ -1,15 +1,15 @@
-import os
+# import os
 import csv
 
 
 class SimpleIterator:
-    def __init__(self, filename: str, classname: str) -> None:
+    def __init__(self, filename: str, classname: str):
         self.filename = filename
         self.limit = -1
         self.counter = -1
         self.classname = classname
         self.rows = list()
-        with open(filename, mode="r", newline=" ") as file:
+        with open(filename, mode="r", newline="\n", encoding = "utf-8") as file:
             reader = csv.reader(file, delimiter=",")
             for row in reader:
                 if row[2] == classname:
@@ -29,7 +29,7 @@ class SimpleIterator:
 
 
 if __name__ == "__main__":
-    s_iter1 = SimpleIterator("dataset_csv_first.csv", "3")
+    s_iter1 = SimpleIterator("annotation.csv", "3")
     print(next(s_iter1))
     print(next(s_iter1))
     print(next(s_iter1))
