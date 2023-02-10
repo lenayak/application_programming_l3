@@ -22,7 +22,6 @@ def copy_dataset(path: str) -> str:
     return new_dataset_path
 
 
-
 def write_as_csv(path: str, path_to_files: str) -> None:
     """Writes path to files in CSV file"""
     with open("annotation1.csv", mode="w", encoding="utf-8") as csvfile:
